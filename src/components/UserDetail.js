@@ -13,6 +13,7 @@ const UserDetail = () => {
     const [user, setUser] = useState(null);
     const [apiStatus, setApiStatus] = useState(apiStatusConstants.initial);
     const { id } = useParams();
+
     useEffect(() => {
         getUserDetails();
     }, [id]);
@@ -40,22 +41,6 @@ const UserDetail = () => {
     const renderLoadingView = () => (
         <div className="user-detail-loader-container">
             <p className="loading-text">Loading...</p>
-        </div>
-    );
-
-    const renderFailureView = () => (
-        <div className="user-detail-error-view-container">
-            <img
-                alt="error view"
-                src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-error-view-img.png"
-                className="error-view-image"
-            />
-            <h1 className="error-message">User Not Found</h1>
-            <Link to="/">
-                <button type="button" className="button">
-                    Go Back
-                </button>
-            </Link>
         </div>
     );
 
@@ -94,8 +79,6 @@ const UserDetail = () => {
         switch (apiStatus) {
             case apiStatusConstants.success:
                 return renderUserDetailsView();
-            case apiStatusConstants.failure:
-                return renderFailureView();
             case apiStatusConstants.inProgress:
                 return renderLoadingView();
             default:
