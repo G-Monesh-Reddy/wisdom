@@ -1,0 +1,191 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+/* General Styles */
+/* Global Styles */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Search Bar */
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Button */
+button {
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* User Card */
+.user-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.user-card a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.user-card a:hover {
+    text-decoration: underline;
+}
+
+/* User Detail Page */
+.user-detail-page {
+    padding: 40px 20px;
+}
+
+.user-detail-loader-container,
+.user-detail-error-view-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.user-detail-error-view-container img {
+    width: 120px;
+    height: 120px;
+}
+
+.user-details-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.user-name {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+}
+
+.user-email,
+.user-phone,
+.user-website,
+.user-company {
+    font-size: 18px;
+    margin: 12px 0;
+}
+
+.website-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.website-link:hover {
+    text-decoration: underline;
+}
+
+.go-back-btn {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 16px;
+}
+
+/* Error View */
+.error-message {
+    font-size: 24px;
+    color: red;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .user-card {
+        padding: 15px;
+    }
+
+    .user-details-container {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .user-name {
+        font-size: 22px;
+    }
+
+    .user-email,
+    .user-phone,
+    .user-website,
+    .user-company {
+        font-size: 16px;
+    }
+
+    .go-back-btn {
+        width: auto;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .search-bar {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    .user-name {
+        font-size: 20px;
+    }
+
+    .user-email,
+    .user-phone,
+    .user-website,
+    .user-company {
+        font-size: 14px;
+    }
+}
